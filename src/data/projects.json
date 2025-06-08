@@ -1,7 +1,7 @@
 [
   {
     "id": "9",
-    "image": "public/assets/project9.png",
+    "image": "assets/project9.png",
     "title": "WANDERLUST 2.0 - BURUNDI TOURISM WEBSITE",
     "languages": [
       "REACTJS",
@@ -14,7 +14,7 @@
   },
   {
     "id": "1",
-    "image": "public/assets/project1.png",
+    "image": "assets/project1.png",
     "title": "AUDIOPHILE E-COMMERCE",
     "languages": [
       "REACTJS",
@@ -25,7 +25,7 @@
   },
   {
     "id": "0",
-    "image": "public/assets/project0.png",
+    "image": "assets/project0.png",
     "title": "DEVELOPER PORTFOLIO",
     "languages": [
       "REACTJS",
@@ -36,7 +36,7 @@
   },
   {
     "id": "2",
-    "image": "public/assets/project2.png",
+    "image": "assets/project2.png",
     "title": "GASABO DISTRICT WEBSITE",
     "languages": [
       "HTML",
@@ -50,7 +50,7 @@
   },
   {
     "id": "3",
-    "image": "public/assets/project3.png",
+    "image": "assets/project3.png",
     "title": "E-BUSINESS LANDING PAGE",
     "languages": [
       "HTML",
@@ -62,7 +62,7 @@
   },
   {
     "id": "7",
-    "image": "public/assets/project7.png",
+    "image": "assets/project7.png",
     "title": "WHERE IN THE WORLD",
     "languages": [
       "REST API",
@@ -74,7 +74,7 @@
   },
   {
     "id": "4",
-    "image": "public/assets/project4.png",
+    "image": "assets/project4.png",
     "title": "WANDERLUST - BURUNDI TOURISM WEBSITE",
     "languages": [
       "HTML",
@@ -86,7 +86,7 @@
   },
   {
     "id": "5",
-    "image": "public/assets/project5.png",
+    "image": "assets/project5.png",
     "title": "DRUM KITS MINI GAME",
     "languages": [
       "HTML",
@@ -98,7 +98,7 @@
   },
   {
     "id": "6",
-    "image": "public/assets/project6.png",
+    "image": "assets/project6.png",
     "title": "MY FIRST CALCULATOR",
     "languages": [
       "HTML",
