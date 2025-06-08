@@ -1,12 +1,11 @@
 :root {
   font-family: Poppins, sans-serif;
-  line-height: 1.5;
+  line-height: 1.30;
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  background-color: #151515;
 
-  font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -125,7 +124,7 @@
   font-weight: 300;
 }
 
-/* Mobile links visible only on small screens */
+/* small screens */
 .mobile-links {
   display: flex;
   gap: 20px;
@@ -139,10 +138,9 @@
 }
 .projects-container {
   display: grid;
-  grid-template-columns: 1fr;
-  gap: 30px;
-  padding: 30px 0;
-  align-items: center;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 40px;
+  text-align: center;
 }
 
 @media (min-width: 1024px) {
@@ -151,3 +149,104 @@
   }
 }
 
+/* Skills section and skill card */
+
+.skills-section {
+  padding: 0 20px;
+  background-color: #151515;
+  color: white;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.big-Title {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.big-Title {
+  font-size: 44px;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 40px;
+  text-align: center;
+}
+
+.skill-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.skill-card .icon {
+  font-size: 64px;
+  margin-bottom: 20px;
+  color: white;
+}
+
+.skill-card h3 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.skill-card p {
+  font-size: 16px;
+  color: #ccc;
+  margin: 4px 0;
+}
+
+/* experience section card style */
+#experience {
+  padding: 3rem 2rem;
+  background-color: #151515;
+  color: #f1f1f1;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.experience-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.experience-card {
+  background-color: #1e1e1e;
+  padding: 1.5rem;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.experience-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.4);
+}
+
+.experience-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: #fff;
+}
+
+.experience-company {
+  font-size: 1rem;
+  color: #b0b0b0;
+  margin-bottom: 0.5rem;
+}
+
+.experience-duration {
+  font-size: 0.95rem;
+  color: #888;
+  margin-bottom: 1rem;
+}
+
+.experience-description {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #e0e0e0;
+}
