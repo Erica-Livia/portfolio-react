@@ -1,60 +1,157 @@
 :root {
   font-family: Poppins, sans-serif;
   line-height: 1.30;
+  margin: 0;
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
   background-color: #151515;
 
-  text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-
 /* Navbar styles */
-
-.navbar{
+.navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 5rem;
+  padding: 1rem 2rem;
+  background-color: #111;
+  color: white;
+  position: sticky;
+  margin: 0;
+  top: 0;
+  z-index: 10;
 }
 
-.logo p{
-  font-weight: bolder;
+.logo p {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.links-container {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+  padding: 0;
+  margin: 0;
+}
+
+.links a {
+  text-decoration: none;
+  color: white;
+  transition: color 0.3s;
+}
+
+.links a:hover {
   color: #add848;
 }
 
-.links-container{
+.sm {
   display: flex;
-  justify-content: space-between;
-  gap: 10px;
 }
 
-.links{
-  list-style: none;
-  padding-right: 5px;
-  padding-left: 5px;
+.toolbar {
+  display: none;
+  font-size: 1.5rem;
+  cursor: pointer;
 }
 
-.nav a, .sm a{
+/* Mobile View */
+@media (max-width: 768px) {
+  .nav, .sm {
+    display: none;
+  }
+  .nav.nav-open {
+    display: block;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    background-color: #151515;
+    width: 100%;
+    text-align: center;
+    padding: 1rem 0;
+  }
+
+  .nav.nav-open .links-container {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .toolbar {
+    display: block;
+  }
+}
+
+/* Hero-section*/
+
+.hero-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 4rem 2rem;
+  background-color: #111111;
+  flex-wrap: wrap;
+}
+
+.heroSectionText {
+  flex: 1;
+  font-size: 2rem;
+  line-height: 1.4;
+  font-weight: 600;
+  color: #ffffff;
+  max-width: 600px;
+  margin-bottom: 1rem;
+}
+
+.contact-button {
+  margin-top: 1rem;
+  background-color: #add848;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.contact-button a {
+  color: white;
   text-decoration: none;
-  color: rgba(255, 255, 255, 0.87) !important;
 }
 
-.sm a{
-  font-size: 18px;
+.contact-button:hover {
+  background-color: rgba(43, 56, 68, 0.2);
 }
 
-.nav a:hover, .sm a:hover{
-  text-decoration: underline;
-  color: #add848 !important;
+.heroSectionImage {
+  flex: 1;
+  max-width: 300px;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  margin-top: 1rem;
 }
 
-.toolbar{
-  /*display: none;*/
-  display: flex;
+/* Responsive*/
+@media (max-width: 768px) {
+  .hero-section {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .heroSectionText {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .heroSectionImage {
+    max-width: 200px;
+    margin-top: 2rem;
+  }
 }
 
 
@@ -249,4 +346,95 @@
   font-size: 0.95rem;
   line-height: 1.6;
   color: #e0e0e0;
+}
+
+
+/* Footer*/
+
+.footer {
+  background-color: #151515;
+  color: #f1f1f1;
+  padding: 3rem 2rem 1rem;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.footer-info, .footer-form {
+  flex: 1;
+  min-width: 280px;
+}
+
+.footer-info h2,
+.footer-form h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.footer-info a {
+  color: #f1f1f1;
+  text-decoration: none;
+  margin-right: 1rem;
+  display: inline-block;
+}
+
+.footer-info a:hover {
+  text-decoration: underline;
+}
+
+.footer-form form {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-form input,
+.footer-form textarea {
+  padding: 0.75rem;
+  margin-bottom: 1rem;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  background-color: #333;
+  color: white;
+}
+
+.footer-form button {
+  background-color: #add848;
+  color: white;
+  border: none;
+  padding: 0.75rem;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.footer-form button:hover {
+  background-color: rgb(59, 76, 94);
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 2rem;
+  font-size: 0.9rem;
+  color: #aaa;
+}
+
+@media (max-width: 768px) {
+  .footer-content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-info, .footer-form {
+    text-align: center;
+  }
+
+  .footer-form form {
+    width: 100%;
+  }
 }

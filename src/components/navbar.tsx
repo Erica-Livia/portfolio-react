@@ -1,56 +1,57 @@
-// import { FaCircleUser } from "react-icons/fa6";
-import { FaLinkedinIn } from "react-icons/fa6";
-import { FaInstagram } from "react-icons/fa6";
-import { FaGithub } from "react-icons/fa6";
+import { FaLinkedinIn, FaInstagram, FaGithub } from "react-icons/fa6";
 import { FaBars } from "react-icons/fa";
-// import {useState} from "react";
+import { useState } from "react";
+import contactInfo from "../data/contact.json"; // adjust path if needed
 
+function Navbar() {
+    const [isOpen, setIsOpen] = useState(false);
 
-function Navbar(){
-
-    // function toggleToolBar() {
-    //     setShow(prev => !prev);
-    // }
-
+    const toggleMenu = () => {
+        setIsOpen(!isOpen);
+    };
 
     return (
-        <>
-            <div className="navbar">
-                {/* Logo or Icon */}
-                {/*<div><FaCircleUser /></div>*/}
-                <div className="logo"><p>Erica-Livia</p></div>
+        <div className="navbar">
+            {/* Logo */}
+            <div className="logo"><p>Erica-Livia</p></div>
 
-                {/* Links */}
-                <div className="nav">
-                    <ul className="links-container">
-                        <li className="links"><a href='#about'>About</a></li>
-                        <li className="links"><a href='#experience'>Experiences</a></li>
-                        <li className="links"><a href='#projects'>Projects</a></li>
-                        <li className="links"><a href='#contact'>Contact Me</a></li>
-                    </ul>
-                </div>
-
-                {/* Link to social Medial */}
-                <div className="sm">
-                    <ul className="links-container">
-                        <li className="links"><a href=''><FaLinkedinIn/></a></li>
-                        <li className="links"><a href=''><FaGithub/></a></li>
-                        <li className="links"><a href=''><FaInstagram/></a></li>
-                    </ul>
-                </div>
-
-                {/* Mobile view*/}
-                <div className="toolbar" >
-                    <FaBars />
-                </div>
-
-                {/*{show && (*/}
-                {/*    */}
-                {/*)}*/}
-
+            {/* Desktop Navigation */}
+            <div className={`nav ${isOpen ? "nav-open" : ""}`}>
+                <ul className="links-container">
+                    <li className="links"><a href='#about'>About</a></li>
+                    <li className="links"><a href='#experience'>Experiences</a></li>
+                    <li className="links"><a href='#projects'>Projects</a></li>
+                    <li className="links"><a href='#contact'>Contact Me</a></li>
+                </ul>
             </div>
-        </>
-    )
+
+            {/* Social Media */}
+            <div className="sm">
+                <ul className="links-container">
+                    <li className="links">
+                        <a href={contactInfo.linkedin} target="_blank" rel="noopener noreferrer">
+                            <FaLinkedinIn />
+                        </a>
+                    </li>
+                    <li className="links">
+                        <a href={contactInfo.github} target="_blank" rel="noopener noreferrer">
+                            <FaGithub />
+                        </a>
+                    </li>
+                    <li className="links">
+                        <a href={contactInfo.instagram} target="_blank" rel="noopener noreferrer">
+                            <FaInstagram />
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            {/* Mobile Menu Icon */}
+            <div className="toolbar" onClick={toggleMenu}>
+                <FaBars />
+            </div>
+        </div>
+    );
 }
 
 export default Navbar;

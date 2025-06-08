@@ -7,7 +7,8 @@ import ExperienceCard from "./components/experienceCard";
 import projectData from "./data/projects.json";
 import skills from "./data/skills.json";
 import experienceData from "./data/experience.json";
-
+import personalInfo from "./data/personalInfo.json";
+import contactInfo from "./data/contact.json";
 
 
 interface Experience {
@@ -32,45 +33,41 @@ function App() {
 
     return (
       <>
-          <div>
+          <div className="app">
               {/* Navigation Bar */}
               <div><Navbar/></div>
 
               {/* Hero Section */}
-              <div>
-                  <div>
-                      <div className="heroSectionText">
-                          Hi My name is Erica-Livia Ingabire, frontend developer based in Kigali.
-                      </div>
-                      <div>
-                          <button className="contact-button">Contact Me</button>
-                      </div>
+              <div className="hero-section">
+                  <div className="heroSectionText">
+                      Hi, my name is {personalInfo.name}, {personalInfo.title}.
+                      <button className="contact-button">
+                          <a href={`mailto:${contactInfo.email}`}>Contact Me</a>
+                      </button>
                   </div>
 
                   <div>
-                      {/*<img alt="Erica's Image" src={erica} className="heroSectionImage"/>*/}
+                      <img alt="Erica's Image" src={contactInfo.image} className="heroSectionImage"/>
                   </div>
               </div>
 
               {/* About me section */}
               <section id="about">
                   <div>
-                      <p>My name is Erica-Livia Ingabire, I'm a soon to be graduate</p>
+                      <h2 className="big-Title">About Me</h2>
+                  </div>
+                  <div>
+                      <p>{personalInfo.about}</p>
                   </div>
               </section>
 
-              {/* Experience section */}
-
-              <section id="experience">
-
-
-              </section>
-
               {/* Projects */}
-              <div className="" id="projects">
-                  <h2 className="big-Title">Projects</h2>
-              </div>
-              <div className="projects-container">
+              <section id="projects">
+                  <div>
+                    <h2 className="big-Title">Projects</h2>
+                  </div>
+
+                  <div className="projects-container">
                   {filteredProjects.map((project) => (
                       <ProjectCard
                           key={project.id}
@@ -81,7 +78,9 @@ function App() {
                           code={project.code}
                       />
                   ))}
-              </div>
+                  </div>
+              </section>
+
 
               {/* Experiences sectuon */}
               <section id="experience">
