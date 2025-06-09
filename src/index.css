@@ -154,11 +154,16 @@
   }
 }
 
+/* About me Section */
+
+.about-container {
+  margin: 0 40px;
+  text-align: center;
+}
 
 /* Project card - component style*/
 
 .project-card {
-  position: relative;
   padding-top: 8px;
   padding-bottom: 32px;
   width: 80%;
@@ -236,7 +241,6 @@
 .projects-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 40px;
   text-align: center;
 }
 
@@ -244,6 +248,13 @@
   .projects-container {
     grid-template-columns: 1fr 1fr;
   }
+}
+
+
+#projects {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 /* Skills section and skill card */
@@ -296,11 +307,10 @@
 }
 
 /* experience section card style */
-#experience {
+#experience, #projects {
   padding: 3rem 2rem;
   background-color: #151515;
   color: #f1f1f1;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .experience-container {

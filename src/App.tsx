@@ -52,7 +52,7 @@ function App() {
               </div>
 
               {/* About me section */}
-              <section id="about">
+              <section id="about" className="about-container">
                   <div>
                       <h2 className="big-Title">About Me</h2>
                   </div>
@@ -63,7 +63,7 @@ function App() {
 
               {/* Projects */}
               <section id="projects">
-                  <div>
+                  <div >
                     <h2 className="big-Title">Projects</h2>
                   </div>
 
